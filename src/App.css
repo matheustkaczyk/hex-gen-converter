@@ -4,10 +4,33 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .hero-hex-text {
   font-family: monospace;
   font-size: 10vh;
   color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.header-btn {
+  width: 100%;
+  padding: 1%;
+  border: none;
+  background-image: linear-gradient(to right, yellow, orange);
+}
+
+.header-icon {
+  max-height: 6vh;
+}
+
+.her-rgb-text {
+  color: rgb(255, 255, 255);
+  font-family: monospace;
+  font-size: 8vh;
 }

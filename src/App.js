@@ -1,20 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import MyContext from './context/Context';
 import Canvas from './components/Canvas';
+import Header from './components/Header';
 import './App.css';
 
-let randomHex = require('random-hex');
 
 function App() {
-  const [hexColor, setHexColor] = useState(false);
-
-  const handleClick = () => {
-    setHexColor(randomHex.generate());
-  }
-
+  const { hexColor, rgb } = useContext(MyContext);
   return (
     <div className="App">
-      <button onClick={() => handleClick()}>Generate</button>
-      { Canvas(hexColor) }
+      { Header() }
+      { Canvas(hexColor, rgb) }
     </div>
   );
 }
